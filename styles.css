@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar-brand img.logo {
+    width: 40px;
+}
+
+.hero-section { 
+    height: 88vh;
+    background: url('bgimg.jpg') center/cover no-repeat;/* Add your image URL here */
+    background-size: cover;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+/*    background: rgba(0, 0, 0, 0.4);  Slight overlay to improve text readability */
+    z-index: 0;
+    height: 50vh;
+}
+
+.hero-section > div {
+    position: relative;
+    z-index: 100;
+    height: 18vh;
+}
+.hero1-section { 
+    height: 15vh;
+    background: url('break.png') center/cover no-repeat; /* Add your image URL here */
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+
+.hero1-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+/*    background: rgba(0, 0, 0, 0.4);  Slight overlay to improve text readability */
+    z-index: 0;
+    height: 50vh;
+}
+
+.hero1-section > div {
+    position: relative;
+    z-index: 100;
+    height: 18vh;
+}
+
+.sectionv {
+    background: url('bgimg2.jpeg') center/cover no-repeat; 
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    position: relative;
+}
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.values ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.values ul li {
+    margin: 10px 0;
+    animation: slide-in 0.5s ease-in-out;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+footer p {
+    margin: 0;
+}
