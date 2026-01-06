@@ -355,6 +355,10 @@
   </style>
 </head>
 <body>
+
+  <audio id="bg-music" loop>
+  <source src="audio.mp3" type="audio/mpeg">
+</audio>
   <div class="gen-flow">
     <div class="gen-track">
       <span>GEN X · 1965–1980</span>
@@ -437,7 +441,7 @@ Research Ethos</h2>
     <p class="access-sub">This space is not public. Identity is required.</p>
 
     <form class="access-form" onsubmit="event.preventDefault(); openFutureKey();">
-      <input type="email" placeholder="Your email address" value="rahulgavande064@gmail.com" required />
+      <input type="email" placeholder="Your email address" value="abc@gmail.com" required />
       <div class="divider">OR</div>
       <input type="text" placeholder="Name one Gen‑Z / Gen‑Alpha cultural icon" />
       <button type="submit" class="cta">Submit Request</button>
@@ -520,7 +524,19 @@ Research Ethos</h2>
     <button class="cta" onclick="closeFutureKey()">Return to MindSpace</button>
   </div>
 </div>
+<script>
+  const music = document.getElementById("bg-music");
 
+  function startMusic() {
+    music.volume = 0.3; // soft background vibe
+    music.play().catch(() => {});
+    document.removeEventListener("click", startMusic);
+    document.removeEventListener("keydown", startMusic);
+  }
+
+  document.addEventListener("click", startMusic);
+  document.addEventListener("keydown", startMusic);
+</script>
 <script>
   function openFutureKey(){
     document.getElementById('accessPage').classList.remove('active');
